@@ -1,0 +1,81 @@
+DesolationRom Github
+====================
+
+Getting Started
+---------------
+
+To get started with building Desolation Rom, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+You will also need to setup the Build Environment before starting or compiling anything
+
+[Click here](https://github.com/REV3NT3CH/guides/blob/master/Build_Environment_Setup_Guide_UbuntuBased.mkdn) for instructions on setting up a build environment for Ubuntu/Mint based Linux distrobutions.
+
+[Click here](https://github.com/REV3NT3CH/guides/blob/master/Build_Environment_Setup_Guide_ArchBased.mkdn) for instructions on setting up a build environment for Arch Based Linux distrobutions.
+
+Initialize Source
+--------------------
+(Assuming you have a valid build environment setup)
+- mkdir deso (or whatever you want to name the source folder)
+- cd ~/deso
+- repo init -u https://github.com/DesolationRom/android_manifest.git -b mm6.0
+
+Sync Source
+--------------------
+- repo sync -jx -f (x being however many cpu jobs, you can also use -c to sync only the current branch specified by repo init)
+
+Build Source
+--------------------
+- . build/envsetup.sh
+
+Choose Device
+--------------------
+- lunch deso_shamu-user
+
+Clean Builds
+--------------------
+- cd ~/deso
+- repo sync -jx -f (x being however many cpu jobs, may also use -c as above)
+- lunch and pick the right device (refer to above for choosing right device to build)
+- mka clean
+- mka deso
+
+Dirty Builds
+--------------------
+- cd ~/deso
+- repo sync -jx -f (x being however many cpu jobs, may also use -c as above)
+- lunch and pick the right device (refer to above for choosing right device to build)
+- mka dirty
+- mka deso
+
+Credits
+--------------------
+- Google for AOSP
+- Xanaxdroid and all of BenzoRom
+- Rascarlo and RastaPop
+- Altaf-Mahdi and Euphoria-OS
+- DariosF and Purity ROM
+- Paranoid Android (AOSPA)
+- AOSPAL
+- CyanogenMod
+- Dirty Unicorns
+- LiquidSmooth
+- AOKP
+- SlimROMS
+- Project D.I.S.C.O. Team
+- PartimusPrime for bootanimations
+- OmniROM
+- Lichti1901 and Terminus
+- Sykopompos
+- Team Horizon and XenonHD
+- Chet and OptiPop
+- VanirAOSP
+- PurifiedROM
+- The-Ancile-Project
+- AOD-Lollibeans
+- Android Open Development
+- Dhacker29
+- beanstown106
+- Ayysir
+- BitSyko Development
+- Others we may have missed
