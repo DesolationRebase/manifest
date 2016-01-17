@@ -526,6 +526,7 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9-xanax" name="xanaxdroid/arm-linux-androideabi-4.9" remote="bb" revision="sabermod" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.2-uber" name="UBERTC/arm-linux-androideabi-5.2" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.2-xanax" name="xanaxdroid/arm-linux-androideabi-5.2" remote="bb" revision="sabermod" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-uber" name="UBERTC/arm-linux-androideabi-5.3" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-existancevip" name="ExistanceVIP/arm-linux-androideabi-5.3" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.3-xanax" name="xanaxdroid/arm-linux-androideabi-5.3" remote="bb" revision="sabermod" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-6.0-xanax" name="xanaxdroid/arm-linux-androideabi-6.0" remote="bb" revision="sabermod" />
