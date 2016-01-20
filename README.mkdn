@@ -93,6 +93,50 @@ Advanced Building Techniques
 - This will show you the 5 lines before and after the line with error
 - You can also use `-A` and `-B` for lines **A**fter and **B**efore, respectively
 
+Advanced Building Techniques
+--------------------
+**Why would I want to do this?**
+
+*Well, a lot of developers build android via SSH, and I wanted to document some tricks for such*
+*If you're building in the SSH shell, and you get disconnected, the build stops. This can get*
+*anoying if you have a slow or spotty connection. Here is my method to building via SSH:*
+
+- You sync and run . build/envsetup and lunch like usual
+- To build you can use this command `nohup make -j$(nproc) deso &`
+
+- `nohup` means no hang up protocol, meaning don't kill the process when the shell exits
+- `nproc` is a core utility on *nix systems that outputs the number of processor "threads" on your board
+
+- `&` means don't listen to our keyboard, so fork the process in the background
+
+**After running this, there will be no output, so what now?**
+*Well, you have a log of the whole thing*
+
+`nohup` saves your output in nohup.out, so you can read it, `grep` for errors and everything else
+
+**But I want to watch it while it's building**
+
+*No problem, that's easy too, just run this command:*
+
+`watch -c -t -n 0.5 tail -n 29 nohup.out`
+- `watch` is a program that runs the command given it over and over again until it's stopped with CTRL+C
+- Make sure to replace the 29 with the number of vertcal rows your shell has
+- And please note that some distributions(only Arch from what I can tell so far) have `watch` without the `-c` option
+- You may need to try `--color` or omiting `-c` altogether should it not work on your distro 
+
+**I don't want the log to always be getting longer**
+*No problem, just run `rm nohup.out` before you use `nohup`*
+
+**How do I find an error in the log?**
+*Have you ever heard of `grep`? It's a nice program*
+- To find any line with the word or partial word 'error', just run
+- `grep error nohup.out`
+
+**I want the surrounding lines around error**
+*`grep` has a manpage, but in short just use the `-C` option, like so:*
+- `grep -C 5 error nohup.out`
+- This will show you the 5 lines before and after the line with error
+- You can also use `-A` and `-B` for lines **A**fter and **B**efore, respectively
 
 Credits
 --------------------
