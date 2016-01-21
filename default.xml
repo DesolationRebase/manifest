@@ -362,7 +362,6 @@
   <project path="packages/apps/BasicSmsReceiver" name="packages_apps_BasicSmsReceiver" remote="aospb" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="deso" />
   <project path="packages/apps/Browser" name="packages_apps_Browser" remote="aospb" />
-  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" groups="pdk-fs" />
   <project path="packages/apps/Calendar" name="packages_apps_Calendar" remote="aospb" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" groups="pdk-fs" />
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="aospb" />
@@ -470,6 +469,7 @@
   <!-- Additions for DesolationRom -->
   <project path="vendor/deso" name="vendor_deso" remote="deso" />
   <project path="packages/apps/DesolatedCore" name="packages_apps_DesolatedCore" remote="deso" />
+  <project path="packages/apps/Calculator" name="packages_apps_Calculator" remote="deso" />
   <project path="external/google" name="CyanogenMod/android_external_google" remote="github" revision="cm-13.0" />
 
   <!-- CAF repos -->
