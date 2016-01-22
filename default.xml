@@ -469,6 +469,7 @@
   <!-- Additions for DesolationRom -->
   <project path="vendor/deso" name="vendor_deso" remote="deso" />
   <project path="packages/apps/DesolatedCore" name="packages_apps_DesolatedCore" remote="deso" />
+  <project path="packages/apps/DesolatedDelta" name="packages_apps_DesolatedDelta" remote="deso" />
   <project path="packages/apps/Calculator" name="packages_apps_Calculator" remote="deso" />
   <project path="external/google" name="CyanogenMod/android_external_google" remote="github" revision="cm-13.0" />
 
