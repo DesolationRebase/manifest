@@ -15,6 +15,10 @@
            fetch="https://github.com/DesolationRebase"
            revision="mm6.0" />
 
+  <remote  name="deso-devices"
+           fetch="https://github.com/DesolationRom-devices"
+           revision="mm6.0" />
+
   <remote  name="github"
            fetch="https://github.com" />
 
