@@ -119,7 +119,6 @@
   <project path="external/google-tv-pairing-protocol" name="platform/external/google-tv-pairing-protocol" groups="pdk-fs" />
   <project path="external/gptfdisk" name="platform/external/gptfdisk" groups="pdk-fs" />
   <project path="external/gtest" name="platform/external/gtest" groups="pdk" />
-  <project path="external/guava" name="platform/external/guava" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/hamcrest" name="platform/external/hamcrest" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk,qcom_msm8x26" />
   <project path="external/hyphenation-patterns" name="platform/external/hyphenation-patterns" groups="pdk-fs" />
@@ -509,6 +508,7 @@
   <project path="external/qrngd" name="external_qrngd" remote="aospb" />
 
   <!-- ffmpeg -->
+  <project path="external/guava" name="external_guava" remote="deso" />
   <project path="external/ffmpeg" name="external_ffmpeg" remote="aospb" />
   <project path="external/stagefright-plugins" name="external_stagefright-plugins" remote="aospb" />
 
