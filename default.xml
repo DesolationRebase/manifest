@@ -96,7 +96,6 @@
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="slim" />
   <project path="packages/apps/FloatingActionButton" name="SlimSaber/android-floating-action-button" remote="github" revision="lp5.1" />
   <project path="frameworks/opt/cards" name="frameworks_opt_cards" remote="slim" revision="mm6.0" />
-  <project path="packages/apps/AudioFX" name="packages_apps_AudioFX" remote="Slim" revision="mm6.0" />
   <!-- END SLIM -->
 
   <!-- CANDY  -->
