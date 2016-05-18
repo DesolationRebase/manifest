@@ -538,7 +538,7 @@
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9-kernel-xanax" name="xanaxdroid/aarch64-4.9" remote="bb" revision="sabermod" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-5.3-kernel-xanax" name="xanaxdroid/aarch64-5.3" remote="bb" revision="sabermod" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.0-kernel-uber" name="UBERTC/aarch64-linux-android-6.0-kernel" remote="bb" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.0-kernel-xanax" name="xanaxdroid/aarch64-6.0" remote="bb" revision="sabermod" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.1-kernel-xanax" name="xanaxdroid/aarch64-6.1" remote="bb" revision="sabermod" />
   <!--END TOOLCHAINS  -->
 
 </manifest>
