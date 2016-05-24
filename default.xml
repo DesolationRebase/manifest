@@ -80,6 +80,7 @@
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="deso" />
   <project path="packages/apps/DUI" name="packages_apps_DUI" remote="deso" />
   <project path="packages/apps/InCallUI" name="packages_apps_InCallUI" remote="deso" />
+  <project path="packages/apps/KernelAdiutor" name="packages_apps_KernelAdiutor" remote="deso" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="deso" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/NovaLauncher" name="packages_apps_NovaLauncher" remote="deso" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="deso" />
