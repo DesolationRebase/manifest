@@ -95,11 +95,11 @@
   <project path="system/extras" name="system_extras" remote="deso" />
   <project path="manifest" name="manifest" remote="deso" />
   <project path="vendor/deso" name="vendor_deso" remote="deso" />
+  <project path="packages/apps/Snap" name="packages_apps_Snap" remote="deso" />
   <!-- END DESOLATION -->
 
   <!-- CM-->
   <project path="external/mm-dash" name="android_external_mm-dash" remote="cm" revision="cm-13.0" />
-  <project path="packages/apps/Snap" name="android_packages_apps_Snap" remote="cm" revision="cm-13.0" />
   <!-- END CM-->
   
   <!-- SLIM-->
