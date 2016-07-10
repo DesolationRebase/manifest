@@ -526,6 +526,7 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.3-uber" name="UBERTC/arm-eabi-5.3" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.3-uberopt" name="REV3NT3CH/uber-arm-eabi-cortex-a15-5.3" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.3-xanax" name="xanaxdroid/arm-eabi-5.3" remote="bb" revision="sabermod" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.4-gnu" name="USA-RedDragon/arm-eabi-5.4" remote="github" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.0-uber" name="UBERTC/arm-eabi-6.0" remote="bb" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.0-xanax" name="xanaxdroid/arm-eabi-6.0" remote="bb" revision="sabermod" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.0-xanax" name="xanaxdroid/arm-eabi-7.0" remote="bb" revision="sabermod" />
