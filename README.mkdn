@@ -1,0 +1,129 @@
+DesolationRom Github
+====================
+
+Getting Started
+---------------
+
+To get started with building Desolation Rom, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+You will also need to setup the Build Environment before starting or compiling anything
+
+[Click here](https://github.com/REV3NT3CH/guides/blob/master/Build_Environment_Setup_Guide_UbuntuBased.mkdn) for instructions on setting up a build environment for Ubuntu/Mint based Linux distrobutions.
+
+[Click here](https://github.com/REV3NT3CH/guides/blob/master/Build_Environment_Setup_Guide_ArchBased.mkdn) for instructions on setting up a build environment for Arch Based Linux distrobutions.
+
+Initialize Source
+--------------------
+(Assuming you have a valid build environment setup)
+- mkdir deso (or whatever you want to name the source folder)
+- cd ~/deso
+- repo init -u https://github.com/DesolationRebase/manifest.git -b o
+
+Sync Source
+--------------------
+- repo sync -c -f -jx --force-sync --no-clone-bundle --no-tags (x being however many cpu jobs, you can also use -c to sync only the current branch specified by repo init)
+
+Build Source
+--------------------
+- . build/envsetup.sh
+
+Choose Device
+--------------------
+- lunch deso_*device*-userdebug
+
+Clean Builds
+--------------------
+- cd ~/deso
+- repo sync -c -f -jx --force-sync --no-clone-bundle --no-tags (x being however many cpu jobs, may also use -c as above)
+- lunch and pick the right device (refer to above for choosing right device to build)
+- make clean
+- make bacon -j# (# being however many cpu jobs, for example i build with -j13)
+
+Dirty Builds
+--------------------
+- cd ~/deso
+- repo sync -c -f -jx --force-sync --no-clone-bundle --no-tags (x being however many cpu jobs, may also use -c as above)
+- lunch and pick the right device (refer to above for choosing right device to build)
+- make dirty
+- make bacon -j# (# being however many cpu jobs, for example i build with -j13)
+
+Advanced Building Techniques
+--------------------
+**Why would I want to do this?**
+
+*Well, a lot of developers build android via SSH, and I wanted to document some tricks for such*
+*If you're building in the SSH shell, and you get disconnected, the build stops. This can get*
+*anoying if you have a slow or spotty connection. Here is my method to building via SSH:*
+
+- You sync and run . build/envsetup and lunch like usual
+- To build you can use this command `nohup make -j$(nproc) deso &`
+
+- `nohup` means no hang up protocol, meaning don't kill the process when the shell exits
+- `nproc` is a core utility on *nix systems that outputs the number of processor "threads" on your board
+
+- `&` means don't listen to our keyboard, so fork the process in the background
+
+**After running this, there will be no output, so what now?**
+*Well, you have a log of the whole thing*
+
+`nohup` saves your output in nohup.out, so you can read it, `grep` for errors and everything else
+
+**But I want to watch it while it's building**
+
+*No problem, that's easy too, just run this command:*
+
+`watch -c -t -n 0.5 tail -n 29 nohup.out`
+- `watch` is a program that runs the command given it over and over again until it's stopped with CTRL+C
+- Make sure to replace the 29 with the number of vertcal rows your shell has
+- And please note that some distributions(only Arch from what I can tell so far) have `watch` without the `-c` option
+- You may need to try `--color` or omiting `-c` altogether should it not work on your distro 
+
+**I don't want the log to always be getting longer**
+*No problem, just run `rm nohup.out` before you use `nohup`*
+
+**How do I find an error in the log?**
+*Have you ever heard of `grep`? It's a nice program*
+- To find any line with the word or partial word 'error', just run
+- `grep error nohup.out`
+
+**I want the surrounding lines around error**
+*`grep` has a manpage, but in short just use the `-C` option, like so:*
+- `grep -C 5 error nohup.out`
+- This will show you the 5 lines before and after the line with error
+- You can also use `-A` and `-B` for lines **A**fter and **B**efore, respectively
+
+DMCA Copyright Infringement Notification
+--------------------
+Official DMCA Copyright Infringement Notification
+
+Our ROM builds follow the safe harbor provisions of 17 U.S.C. §512, otherwise known as Digital Millennium Copyright Act (“DMCA”).
+
+To file a copyright infringement notification with us, you will need to send a written communication that includes substantially the following:
+
+- A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+- Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works at that site.
+- Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit the service provider to locate the material. Providing URLs in the body of an email is the best way to help us locate content quickly.
+- Information reasonably sufficient to permit the service provider to contact the complaining party, such as an address, telephone number, and, if available, an electronic mail address at which the complaining party may be contacted.
+- A statement that the complaining party has a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.
+- A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed (Note that under Section 512(f) any person who knowingly and materially misrepresents that material or activity is infringing may be subject to liability for damages. In other words, DON’T MAKE FALSE CLAIMS!
+
+To expedite our ability to process your request, such written notice should be sent to our designated agent whose contact information is available via our “DMCA Designated Agent” listed below:
+
+- Jacob McSwain
+- 405-517-1253
+- jacob.a.mcswain@gmail.com
+
+Credits
+--------------------
+- Google for AOSP
+- Sanyam Jain for AOSP-CAF
+- CyanogenMod
+- Lineage OS
+- Dirty Unicorns
+- gagan3421 for bootanimations
+- Sykopompos
+- Chet and OptiPop
+- Substratum Team
+- beanstown106
+- Others we may have missed
